@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -17,5 +18,15 @@ public class Restaurant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column
-    private String title;
+    private String name;
+    @Column
+    private String address;
+    @Column
+    private float qualification;
+    @Column
+    private String typeFood;
+
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL)
+    private List<Comment> comments;
+
 }

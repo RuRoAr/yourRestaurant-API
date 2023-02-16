@@ -17,23 +17,5 @@ public class UserServiceImpl implements UserService{
     }
 
 
-    @Override
-    public User deleteUser(long id) {
-        return null;
-    }
 
-    @Override
-    public User addUser(User user) {
-        return null;
-    }
-
-    @Override
-    public User modifyUser(User user, long id) {
-        return null;
-    }
-
-    @Override
-    public User findUser(long id) {
-        return null;
-    }
 }

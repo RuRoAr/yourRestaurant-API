@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -27,6 +28,7 @@ public class User {
     @Column
     private Byte[] userPhoto;
 
-
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Comment> users;
 
 }
