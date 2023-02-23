@@ -10,4 +10,6 @@ public interface UserService {
 
 
     User getUserByEmailAndPassword(String email, String password);
+
+    User addUser(User user);
 }
