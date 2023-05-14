@@ -16,7 +16,6 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
 
-    // Lista todos los comentarios
     @GetMapping("/comments")
     public List<Comment> getComments() {
         logger.info("Prepare a list for all comment");

@@ -36,6 +36,15 @@ public class UserController {
         User user = userService.getUserByEmailAndPassword(email,password);
         return user;
     }
+    @PostMapping("/user")
+    public User addUser(@RequestBody User user) {
+        logger.info("Register a new user", user);
+        User newUser = userService.addUser(user);
+
+        logger.info("End register a new user", user);
+        return newUser;
+    }
+
 
     @PostMapping("/user")
     public User addUser(@RequestBody User user) {
