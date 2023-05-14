@@ -29,6 +29,6 @@ public class User {
     private Byte[] userPhoto;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Comment> users;
+    private List<Comment> comments;
 
 }
