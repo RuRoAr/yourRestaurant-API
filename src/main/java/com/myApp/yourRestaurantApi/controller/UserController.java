@@ -46,4 +46,12 @@ public class UserController {
     }
 
 
+    @PostMapping("/user")
+    public User addUser(@RequestBody User user) {
+        logger.info("Register a new user", user);
+        User newUser = userService.addUser(user);
+        logger.info("End register a new user", user);
+        return newUser;
+    }
+
 }
