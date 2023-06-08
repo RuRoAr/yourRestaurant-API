@@ -5,11 +5,14 @@ import com.myApp.yourRestaurantApi.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
+//@RequestMapping("/api/v1")
 public class UserController {
     private final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -21,10 +24,8 @@ public class UserController {
     public List<User> getUsers() {
         logger.info("Prepare a list for all users");
         List<User> users;
-
         logger.info("Find all users");
         users = userService.findAllUsers();
-
         logger.info("End find all users");
         return users;
 
@@ -46,4 +47,8 @@ public class UserController {
     }
 
 
-}
+    }
+
+    
+
+
