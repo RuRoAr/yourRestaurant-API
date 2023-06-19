@@ -39,7 +39,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null);
 
         }
-        else return ResponseEntity.ok(users);
+        else return ResponseEntity.ok(users) ;
 
 
     }
