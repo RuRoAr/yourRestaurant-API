@@ -23,7 +23,7 @@ public class RestaurantController {
     // Lista todos los usuarios
     @GetMapping("/restaurants")
     public List<Restaurant> getRestaurants() {
-        logger.info("Prepare a list for all restaurnat");
+        logger.info("Prepare a list for all restaurant");
         List<Restaurant> restaurants;
 
         logger.info("Find all restaurants");

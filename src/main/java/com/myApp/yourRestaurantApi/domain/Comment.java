@@ -22,10 +22,10 @@ public class Comment {
     private String title;
     @Column
     private String text;
-    @Column(name="comment_date")
-    @JsonFormat(pattern="dd-MM-yyyy")
-    private LocalDate date;
     @Column
+    private String date;
+    @Column
+    @Lob
     private Byte[] commentPhoto;
 
     @ManyToOne

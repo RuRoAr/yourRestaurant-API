@@ -26,6 +26,7 @@ public class User {
     @Column
     private String email;
     @Column
+    @Lob
     private Byte[] userPhoto;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

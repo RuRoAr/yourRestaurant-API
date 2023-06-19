@@ -5,8 +5,9 @@ import com.myApp.yourRestaurantApi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.annotation.WebFilter;
 import java.util.List;
-
+@Service
 public class UserServiceImpl implements UserService{
 
     @Autowired
@@ -17,8 +18,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User getUserByEmailAndPassword(String email, String password) {
-       return userRepository.getUserByEmailAndPassword(email,password);
+    public List<User> getUserByEmailAndPassword(String email, String password) {
+       return  userRepository.getUserByEmailAndPassword(email,password);
     }
     @Override
     public User addUser(User user) {
