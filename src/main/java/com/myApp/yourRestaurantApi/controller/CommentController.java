@@ -27,6 +27,7 @@ public class CommentController {
         return comments;
 
     }
+
     @DeleteMapping("/comment/{commentId}")
     public Comment deleteComment(@PathVariable long commentId) {
         logger.info("Delete message with ID: " + commentId);

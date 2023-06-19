@@ -22,7 +22,9 @@ public class User {
     @Column
     private String userName;
     @Column
-    private String password;
+    private String password1;
+    @Column
+    private String password2;
     @Column
     private String email;
     @Column
